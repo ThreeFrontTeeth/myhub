@@ -336,7 +336,7 @@ export async function importAll(json: string): Promise<boolean> {
       deleteAll("user_settings"),
     ]);
 
-    const ops: Promise<unknown>[] = [];
+    const ops: PromiseLike<unknown>[] = [];
 
     if (Array.isArray(data.todos) && data.todos.length > 0) {
       ops.push(
